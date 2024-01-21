@@ -70,8 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 170 && marioPosition > -20) {
             pipe.style.animation = "none";
             pipe.style.left = `${pipePosition}px`;
-
-
+            
+            
+            mario.style.animation = "none";
             mario.style.bottom = `${marioPosition}px`;
             mario.src = "../img/game-over.png";
             mario.style.width = "75px";
@@ -80,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             sound_back.pause()
 
             setTimeout(() => {
-                mario.style.bottom = `calc(${marioPosition}px + 200px)
+                mario.style.bottom = `calc(${marioPosition}px + 600px)
                 `;
             }, 200);
             setTimeout(() => {
